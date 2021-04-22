@@ -1,0 +1,56 @@
+.hero {
+    position: relative;
+    background: pink;
+  
+    &:after,
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  
+    &:after {
+      content: "";
+      background-color: var(--dark);
+      opacity: 0.63;
+    }
+  
+    &-image {
+      object-fit: cover;
+    }
+  
+    .hero-content {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-top: 65px;
+      padding-bottom: 140px;
+      color: #fff;
+      z-index: 1;
+  
+      h1 {
+        margin: 0;
+      }
+
+    //   p {
+    //       //...
+    //   }
+
+      a {
+          text-decoration: none;
+          color: #fff;
+          border: 2px solid #fff;
+          padding: 10px 20px;
+          font-size: 14px;
+          font-weight: bold;
+      }
+
+      img {
+        
+      }
+    }
+  }
