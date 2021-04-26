@@ -1,0 +1,145 @@
+.pricing-section {
+    background-color: var(--blue);
+    text-align: center;
+    .container {
+        padding-top: 97px;
+        padding-bottom: 107px;
+        @include mobile {
+            padding-top: 85px;
+            padding-bottom: 75px;
+        }
+    }
+    h2 {
+        color: #fff;
+        text-transform: uppercase;
+    }
+    svg {
+        margin-top: 21px;
+        margin-bottom: 27px;
+    }
+    p {
+        color: #fff;
+    }
+}
+
+.pricing-cards-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 83px; 
+    @media (max-width: 1150px) {
+        justify-content: space-between;
+    }
+    @include smaller-tablet {
+        flex-direction: column;
+        align-items: center;
+    }
+    @include mobile {
+        margin-top: 50px;
+    }
+
+    h4, .price, .payment {
+        background-color: #333333;
+    }
+    h4 {
+        color: #fff;
+        font-weight: 400;
+        width: 343px;
+        padding: 14px 0;
+        border-radius: 5px 5px 0 0;
+        @media (max-width: 1150px) {
+            width: 310px;
+        }
+        @include smaller-tablet {
+            width: 343px;
+        }
+        @include mobile {
+            width: 300px;
+        }
+    }
+    .price {
+        font-size: 94px;
+        padding-top: 37px;
+        padding-bottom: 37px;
+        @include mobile {
+            font-size: 46px;
+            padding-top: 27px;
+            padding-bottom: 27px;
+        }
+        span {
+            font-size: 36px;
+            @include mobile {
+                font-size: 26px;
+            }
+        }
+    }
+    .payment {
+        padding-top: 5px;
+        padding-bottom: 17px;
+        span {
+            opacity: 0.5;
+        }
+    }
+}
+
+.plan-card-center {
+    .green-line {
+        background-color: var(--green);
+        padding: 11px 0;
+        p {
+            text-transform: uppercase;
+        }
+    }
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+    @media (max-width: 1150px) {
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    @include smaller-tablet {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    
+}
+
+.plan-card {
+    .green-line {
+        background-color: var(--green);
+        height: 6px;
+    }
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
+    @media (max-width: 1150px) {
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+    @include smaller-tablet {
+        margin: 0;
+        margin-bottom: 15px;
+    }
+    
+}
+.pricing-cards-section{
+    ul {
+        list-style-type: none;
+        text-align: center;
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        border-radius: 0px 0px 5px 5px;
+        li {
+            color: var(--gray);
+            text-transform: uppercase;
+            line-height: 40px;
+            @include mobile {
+                line-height: 35px;
+            }
+        }
+    }
+}

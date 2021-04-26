@@ -1,7 +1,10 @@
 .hero {
     position: relative;
-    background: pink;
-  
+    display: flex;
+    min-height: calc(100vh - 107px - 72px);
+    @include tablet {
+      height: auto;
+    }
     &:after,
     &-image {
       position: absolute;
@@ -13,7 +16,7 @@
   
     &:after {
       content: "";
-      background-color: var(--dark);
+      background-color: var(--black);
       opacity: 0.63;
     }
   
@@ -24,33 +27,55 @@
     .hero-content {
       position: relative;
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-end;
       padding-top: 65px;
-      padding-bottom: 140px;
+      padding-bottom: 139px;
       color: #fff;
       z-index: 1;
-  
+      @include tablet {
+        align-items: center;
+      }
+      @include small-screen {
+        flex-direction: column;
+      }
+      @include mobile {
+        padding-bottom: 80px;
+      }
+    }
+    .first-column{
+      margin-right: 87px; 
+      @include tablet {
+        margin-right: 50px;
+      }
+      @include small-screen {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
       h1 {
         margin: 0;
+        padding-top: 24px;
+        padding-bottom: 24px;
       }
-
-    //   p {
-    //       //...
-    //   }
-
-      a {
-          text-decoration: none;
-          color: #fff;
-          border: 2px solid #fff;
-          padding: 10px 20px;
-          font-size: 14px;
-          font-weight: bold;
+      h5 {
+        padding-top: 24px;
+        padding-bottom: 43px;
+        line-height: 23px;
       }
-
-      img {
-        
+      .download-btn {
+        border: solid 2px #FFFFFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        padding: 10px 20px;
+  
+        &:hover {
+          background-color: var(--peach);
+          transform: scale(1.1);
+        }
       }
     }
   }

@@ -1,25 +1,24 @@
 :root {
-  --dark: #1c1c1c;
-}
-
-html {
-  scroll-behavior: smooth;
+  --black:  #1C1C1C;
+  --peach: #E27866;
+  --pastel: #A37169;
+  --blue: #6696E2;
+  --green: #41D395;
+  --border: #F5F5F5;
+  --label: #D8D8D8;
+  --gray: #86878B;
 }
 
 body {
   margin: 0;
+  
+}
+* {
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-.container {
-  max-width: 1140px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-@import "components/header";
-@import "components/hero";
-@import "components/custom-section";
-@import "components/form";
-@import "components/tab-section";
+@import "global/global-base.scss";
+@import "components/components-base.scss";
