@@ -153,12 +153,18 @@ form {
 .hidden-messages{
   display: flex;
   flex-direction: column;
- .bad-message, .good-message {
-  text-transform: none;
-  text-align: left;
-  font-size: 12px;
-}
+
+  .bad-message, .good-message {
+    text-transform: none;
+    text-align: left;
+    font-size: 12px;
+  }
+
   .good-message {
-    color: var(--green);
+      color: var(--green);
+  }
+
+  .bad-message {
+    color: red;
   }
 }

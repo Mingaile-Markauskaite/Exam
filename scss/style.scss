@@ -20,5 +20,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.logo-img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 52px;
+}
+.hero-logo {
+  width: 247px;
+  height: 108px;
+  @include mobile {
+      height: 80px;
+  }
+}
+
 @import "global/global-base.scss";
 @import "components/components-base.scss";
